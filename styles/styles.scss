@@ -1,3 +1,9 @@
+$color-basic: #58B79D;
+$color-secondary: #364B44;
+$color-tertiary: #6DACE4;
+$color-warn: #FFA17A;
+$color-text: #213026;
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -5,6 +11,12 @@ html {
         margin: 0;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
+        h1, h2, h3 {
+            color: $color-basic;
+        }
+        p, span {
+            color: $color-text;
+        }
     }
   }
   
