@@ -3,8 +3,8 @@ let ticking = false;
 
 function doSomething(scroll_pos) {
   scroll_pos < 5 ?
-    document.querySelector('nav').classList.remove('transparent') :
-    document.querySelector('nav').classList.add('transparent')
+    document.querySelector('nav').classList.remove('toWhite') :
+    document.querySelector('nav').classList.add('toWhite')
 }
 
 window.addEventListener('scroll', function (e) {
