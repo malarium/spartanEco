@@ -38,7 +38,7 @@ html {
           }
       }
       nav {
-          height: 60px;
+          height: 80px;
           position: fixed;
           top: 0;
           left: 0;
@@ -47,25 +47,40 @@ html {
           box-sizing: content-box;
           transition: all .25s;
           z-index: 2;
-          font-size: 16px;
-          font-weight:500;
+          font-size: 24px;
+          font-weight:700;
           .nav-logo {
               background-image: url('../../images/logo.png');
-              height: 60px;
+              height: 80px;
               background-repeat: no-repeat;
               background-size: contain;
           }
           a {
-              font-size: 16px;
               &:hover {
                   color: $color-basic;
               }
           }
           .call-ico {
-            height: 30px;
-            margin-right:10px;
+            height: 50px;
+            margin-right:20px;
           }
+          
       }
+      @media(max-width: 1400px) {
+        nav {
+            font-size: 20px;
+            height: 60px;
+            .nav-logo {
+                height: 60px;
+            }
+            .call-ico {height:30px}
+        }
+    }
+    @media(max-width: 1140px) {
+        nav {
+           //code for tablets and mobiles
+        }
+    }
       .centerTxt {
         top: 50%;
         left: 50%;
@@ -100,5 +115,39 @@ html {
       background-color: white;
   }
   main {
-      
+      background-color: $color-basic;
+      color:black;
+      .aboutUs {
+          font-size: 20px;
+          &-imgs {
+              @media (max-width:992px) {
+                  height: 480px;
+              }
+              @media (max-width:768px) {
+                height: 380px;
+            }
+              &--inner {
+                  width: 45%;
+                  height: auto;
+                  object-fit:cover;
+                  border: 5px solid white;
+                  box-shadow: 0 0 15px 3px #000;
+              }
+              &--one {
+                  left: 0;
+                  top: 0;
+                  transform: rotate(-20deg);
+                  z-index:2;
+              }
+              &--two {
+                  right: 0;
+                  top: 0;
+                  transform: rotate(20deg);
+              }
+              &--three {
+                  left: 30%;
+                  top: 50px;
+              }
+          }
+      }
   }
