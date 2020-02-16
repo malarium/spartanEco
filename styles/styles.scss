@@ -3,15 +3,27 @@ $color-secondary: #364B44;
 $color-tertiary: #6DACE4;
 $color-warn: #FFA17A;
 $color-text: #213026;
-
+// html,body
+// {
+//     width: 100%;
+//     height: 100%;
+//     margin: 0px;
+//     padding: 0px;
+//     overflow-x: hidden; 
+// }
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
     body {
         margin: 0;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 14px;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        overflow-x: hidden;
         h1, h2, h3 {
             color: $color-basic;
         }
@@ -46,14 +58,51 @@ html {
           color: white;
           box-sizing: content-box;
           transition: all .25s;
-          z-index: 2;
+          z-index: 3;
           font-size: 24px;
           font-weight:700;
-          .nav-logo {
-              background-image: url('../../images/logo.png');
+          .topNav-logo {
               height: 80px;
-              background-repeat: no-repeat;
-              background-size: contain;
+              width: 80px;
+              &--img {
+                  height: 65px;
+              }
+              &--txt {
+                  &_color {
+                      color: $color-basic;
+                  }
+              }
+          }
+          .topNav-menu {
+              &--list {
+                list-style: none;
+                li {
+                    margin: 0 7px;
+                }
+              }
+              &--mob {
+                  font-size: 36px;
+                  color:black;
+                  &_box {
+                    width: 160px;
+                    background-color: $color-secondary;
+                    right: -160px;
+                    top: 0;
+                    will-change: right;
+                    transition: right .2s;
+                    font-size: 24px;
+                    li {
+                        padding: 5px 0;
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+                &_open {
+                    right: 0;
+                }
+              }
+              
           }
           a {
               &:hover {
@@ -66,21 +115,32 @@ html {
           }
           
       }
-      @media(max-width: 1400px) {
-        nav {
-            font-size: 20px;
-            height: 60px;
-            .nav-logo {
-                height: 60px;
+      @media (max-width: 768px) {
+        .topNav {
+            &-phone {
+                a {
+                    font-size: 18px;
+                    .call-ico {
+                        height: 30px;
+                        margin-right: 5px;
+                    }
+                }
             }
-            .call-ico {height:30px}
+            &-logo {
+                &--img {
+                    height: 40px !important;
+                }
+                span {
+                    font-size: 18px;
+                }
+            }
+            &-menu--mob {
+                &_ico {
+                    font-size:24px;
+                }
+            }
         }
-    }
-    @media(max-width: 1140px) {
-        nav {
-           //code for tablets and mobiles
-        }
-    }
+      }
       .centerTxt {
         top: 50%;
         left: 50%;
@@ -134,13 +194,13 @@ html {
                   box-shadow: 0 0 15px 3px #000;
               }
               &--one {
-                  left: 0;
+                  left: 15px;
                   top: 0;
                   transform: rotate(-20deg);
                   z-index:2;
               }
               &--two {
-                  right: 0;
+                  right: 15px;
                   top: 0;
                   transform: rotate(20deg);
               }
@@ -148,6 +208,34 @@ html {
                   left: 30%;
                   top: 50px;
               }
+          }
+      }
+      .offer {
+          &-title {
+              color: black;
+          }
+          .accordion {
+              .card {
+                  border: 0;
+              }
+          }
+          .card-header {
+              text-align: center;
+              background-color:$color-basic;
+              .btn-link {
+                  color: $color-text;
+                  text-decoration: none;
+                  font-size: 24px;
+                  font-weight: 800;
+              }
+          }
+          .card-body {
+              background-color:$color-basic;
+              color: $color-text;
+              font-size: 20px;
+          }
+          hr {
+              border-bottom: 2px solid $color-text;
           }
       }
   }

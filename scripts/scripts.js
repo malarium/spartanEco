@@ -19,8 +19,11 @@ window.addEventListener('scroll', function (e) {
     ticking = true;
   }
 });
-// window.addEventListener('DOMContentLoaded', () => {
-//   const txtHeight = document.querySelector('.aboutUs-txt').offsetHeight;
-//   const imgsBlock = document.querySelector('.aboutUs-imgs');
-//   imgsBlock.style.height = `${txtHeight}px;`;
-// })
+
+const menuBtns = Array.from(document.getElementsByClassName('topNav-menu--mob_ico'));
+menuBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const menuBox = document.querySelector('.topNav-menu--mob_box');
+    menuBox.classList.contains('topNav-menu--mob_open') ? menuBox.classList.remove('topNav-menu--mob_open') : menuBox.classList.add('topNav-menu--mob_open');
+  })
+})
