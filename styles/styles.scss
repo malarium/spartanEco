@@ -210,32 +210,73 @@ html {
               }
           }
       }
+
+      @keyframes move {
+          from {background-position: 50% 50%;}
+          to {background-position: 47% 47%;}
+      }
+
       .offer {
+          position: relative;
+          overflow: hidden;
+          width: calc(100% + 30px);
+          margin-left: -15px;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:url("../images/raindrops.png");
+            background-position: 50% 50%;
+            background-color: #f2f2f2;
+            filter: blur(5px);
+            animation: move 5s ease-in-out infinite alternate;
+          }
+          
           &-title {
-              color: black;
+            color: black;
+            text-shadow: 0 0 9px grey;
+            font-size: 3em;
+            text-transform: uppercase;
+            filter: blur(0);
           }
           .accordion {
               .card {
                   border: 0;
+                  background-color: rgba(255,255,255,.65);
               }
           }
           .card-header {
               text-align: center;
-              background-color:$color-basic;
+              background-color: transparent;
               .btn-link {
-                  color: $color-text;
+                  color: black;
                   text-decoration: none;
-                  font-size: 24px;
-                  font-weight: 800;
+                  font-size: 1.1em;
+                  text-transform: uppercase;
+                  font-weight: 500;
               }
           }
           .card-body {
-              background-color:$color-basic;
-              color: $color-text;
-              font-size: 20px;
+              background-color: transparent;
+              color: black;
+              font-size: 22px;
+              font-weight: 500;
           }
           hr {
               border-bottom: 2px solid $color-text;
+              width: 80%;
+          }
+          @media(max-width: 768px) {
+              .card-header {
+                  .btn-link {
+                      font-size: 24px;
+                  }
+              }
+              &-title {
+                  font-size: 2em;
+              }
           }
       }
   }
