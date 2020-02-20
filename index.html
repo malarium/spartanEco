@@ -105,8 +105,8 @@
     </div>
   </div>
 
-
-  <div class="offer container-fluid py-5 px-0">
+  <div class="blur-cover container-fluid"></div>
+  <div class="offer container-fluid py-0 px-0">
     <h2 class="offer-title text-center mb-3 mt-5">Zapoznaj się z naszą ofertą:</h2>
     <hr />
 
@@ -173,8 +173,28 @@
       </div>
     </div>
   </div>
+  <div class="blur-cover-bottom container-fluid"></div>
 
-  <div style="overflow:hidden;width: 800px;position: relative;"><iframe width="800" height="320" src="https://maps.google.com/maps?width=800&amp;height=320&amp;hl=en&amp;q=SpartanEco%20Polska%20Justyn%C3%B3w+(SpartanEco)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/it/">Embedgooglemaps IT</a> & <a href="https://youtubeembedcodegenerator.com/en/">www.youtubeembedcodegenerator.com</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+  <div class="container contact">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="contact-map px-3">
+        <h2 class="text-center py-5">Znajdź nas</h2>
+        <iframe src="https://maps.google.com/maps?width=800&amp;height=320&amp;hl=en&amp;q=SpartanEco%20Polska%20Justyn%C3%B3w+(SpartanEco)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+       
+      <div class="contact-form px-3">
+        <h2 class="text-center pt-0 pt-md-5 pb-5">Napisz do nas!</h2>
+        <form class="d-flex flex-column justify-content-between" method="post" action="mail.php">
+          <input type="text" name="temat" placeholder="Temat wiadomości" />
+          <input type="email" name="mail_zw" placeholder="Twój adres e-mail" />
+          <textarea rows="10" name="wiadomosc" placeholder="Wiadomość"></textarea>
+          <input type="submit" value="Wyślij" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 500px;"></div>
 
   </main>
   <footer></footer>

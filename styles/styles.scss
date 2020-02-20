@@ -213,7 +213,18 @@ html {
 
       @keyframes move {
           from {background-position: 50% 50%;}
-          to {background-position: 47% 47%;}
+          to {background-position: 40% 40%;}
+      }
+
+      .blur-cover {
+          height: 10px;
+          background-color: #f2f2f2; 
+          margin-bottom: -10px;
+          &-bottom {
+            height: 10px;
+            background-color: #f2f2f2; 
+            margin-top: -10px;
+          }
       }
 
       .offer {
@@ -276,6 +287,47 @@ html {
               }
               &-title {
                   font-size: 2em;
+              }
+          }
+      }
+      .contact {
+          iframe {
+              width: 96vw;
+              height: 400px;
+              @media(min-width: 768px) {
+                  width: 100%;
+                  min-width: 350px;
+              }
+              @media(min-width: 992px) {
+                width: 100%;
+                min-width: 550px;
+            }
+          }
+          h2 {
+              color: $color-text;
+          }
+          
+          &-form {
+              width: 100%;
+              form {
+                  height: 400px;
+              }
+              input[type=text],
+              input[type=email] {
+                line-height: 24px;
+                padding: 5px;
+                font-size: 24px;
+              }
+              textarea {
+                line-height: 24px;
+                padding: 5px;
+                font-size: 24px;
+              }
+              input[type=submit] {
+                border: 1px solid #FFA17A;
+                background-color: #FFA17A;
+                font-size: 24px;
+                font-weight: 800;
               }
           }
       }
