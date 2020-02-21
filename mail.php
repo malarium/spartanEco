@@ -8,7 +8,7 @@
   $do = "malarium@wp.pl";
   if(isset($_GET['temat']) && isset($_GET['wiadomosc']) && isset($_GET['mail_zw'])) {
     $temat = $_GET['temat'];
-    $tresc = $GET['wiadomosc'];
+    $tresc = $_GET['wiadomosc'];
     $mail = $_GET['mail_zw'];
     if($temat=="" || $tresc=="" || $mail=="") {
       echo "<h1><center>Uzupełnij wszystkie pola!</center></h1>";
