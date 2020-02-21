@@ -19,7 +19,6 @@
       $headers .= "Content-Type: text/plain; charset=UTF-8\n";
       $headers .= "Content-Transfer-Encoding: 8bit\n";
       if(mail($do, $temat, $tresc, $headers)){
-        mail($do, $temat, $tresc, $headers);
         echo '<h1><center>Wiadomość wysłana, dziękujemy!</center></h1>';
       }
       else{
