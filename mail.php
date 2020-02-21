@@ -6,10 +6,10 @@
 
 <?php
   $do = "malarium@wp.pl";
-  if(isset($_GET['temat']) && isset($_GET['wiadomosc']) && isset($_GET['mail_zw'])) {
-    $temat = $_GET['temat'];
-    $tresc = $_GET['wiadomosc'];
-    $mail = $_GET['mail_zw'];
+  if(isset($_POST['temat']) && isset($_POST['wiadomosc']) && isset($_POST['mail_zw'])) {
+    $temat = $_POST['temat'];
+    $tresc = $_POST['wiadomosc'];
+    $mail = $_POST['mail_zw'];
     if($temat=="" || $tresc=="" || $mail=="") {
       echo "<h1><center>Uzupełnij wszystkie pola!</center></h1>";
       echo "<meta http-equiv='Refresh' content='2;url=index.html' />";
