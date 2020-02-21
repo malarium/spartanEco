@@ -15,7 +15,7 @@
       echo "<meta http-equiv='Refresh' content='2;url=index.html' />";
     }
     else {
-      $headers = "From: ".$mail."\r\n";
+      $headers = "From: ".$mail."\n";
       $headers .= "Content-Type: text/plain; charset=UTF-8\n";
       $headers .= "Content-Transfer-Encoding: 8bit\n";
       if(mail($do, $temat, $tresc, $headers)){
