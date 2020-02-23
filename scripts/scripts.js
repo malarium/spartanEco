@@ -27,3 +27,14 @@ menuBtns.forEach(btn => {
     menuBox.classList.contains('topNav-menu--mob_open') ? menuBox.classList.remove('topNav-menu--mob_open') : menuBox.classList.add('topNav-menu--mob_open');
   })
 })
+
+//menu listeners
+function scrollToElem (target) {
+  console.log(target)
+  document.querySelector(`${target}`).scrollIntoView({behavior: "smooth", block: "start"});
+}
+
+const dateBox = document.querySelector('.date-box');
+const actualDate = new Date().getFullYear();
+dateBox.textContent = `© ${actualDate} by SpartanEco`;
+

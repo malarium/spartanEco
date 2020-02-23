@@ -52,10 +52,10 @@
       </div>
       <div class="topNav-menu d-none d-lg-block">
         <ul class="topNav-menu--list d-flex align-items-center m-0">
-          <li><a href="#">O nas</a></li>
-          <li><a href="#">Oferta</a></li>
-          <li><a href="#">Galeria</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li class="onas" onclick="scrollToElem('.aboutUs')">O nas</li>
+          <li class="oferta" onclick="scrollToElem('.offer')">Oferta</li>
+          <li class="galeria"><a href="gallery.html">Galeria</a></li>
+          <li class="kontakt" onclick="scrollToElem('.contact')">Kontakt</li>
         </ul>
       </div>
       <div class="topNav-menu--mob d-block d-lg-none">
@@ -63,10 +63,10 @@
         <div class="topNav-menu--mob_box position-absolute pt-1 pb-3">
           <ul class="topNav-menu--list d-flex flex-column justify-content-start m-0 px-1">
             <li><a class="float-right topNav-menu--mob_ico" href="#">X</a></li>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Oferta</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li class="onas" onclick="scrollToElem('.aboutUs')">O nas</li>
+            <li class="oferta" onclick="scrollToElem('.offer')">Oferta</li>
+            <li class="galeria"><a href="gallery.html">Galeria</a></li>
+            <li class="kontakt" onclick="scrollToElem('.contact')">Kontakt</li>
           </ul>
         </div>
       </div>
@@ -107,7 +107,7 @@
 
   <div class="blur-cover container-fluid"></div>
   <div class="offer container-fluid py-0 px-0">
-    <h2 class="offer-title text-center mb-3 mt-5">Zapoznaj się z naszą ofertą:</h2>
+    <h2 class="container offer-title text-center mb-3 mt-5">Zapoznaj się z naszą ofertą:</h2>
     <hr />
 
     <div class="accordion pb-5" id="accordionExample">
@@ -175,7 +175,7 @@
   </div>
   <div class="blur-cover-bottom container-fluid"></div>
 
-  <div class="container contact">
+  <div class="container contact pb-5">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
       <div class="contact-map px-3">
         <h2 class="text-center py-5">Znajdź nas</h2>
@@ -193,11 +193,15 @@
       </div>
     </div>
   </div>
-
-  <div style="height: 500px;"></div>
-
   </main>
-  <footer></footer>
+
+  <footer class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center date-box"></div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
