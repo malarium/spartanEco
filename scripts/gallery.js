@@ -4,18 +4,18 @@ var pswpElement = document.querySelectorAll('.pswp')[0];
 var items = [
     {
         src: 'images/gallery/pic1.jpg',
-        w: 600,
-        h: 600
+        w: 900,
+        h: 900
     },
     {
         src: 'images/gallery/pic2.jpg',
-        w: 600,
-        h: 600
+        w: 900,
+        h: 900
     },
     {
        src: 'images/gallery/pic3.jpg',
-        w: 600,
-        h: 600 
+        w: 900,
+        h: 900 
     }
 ];
 
