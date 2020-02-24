@@ -5,33 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria SpartanEco</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="photoswipe/photoswipe.css">
     <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
-    <style>
-        .my-gallery {
-            width: 100%;
-            float: left;
-        }
-        
-        .my-gallery img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .my-gallery figure {
-            display: block;
-            float: left;
-            margin: 0 5px 5px 0;
-            width: 150px;
-        }
-        
-        .my-gallery figcaption {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/gallery.min.css">
 </head>
 
 <body>
+    <div></div>
+    <a class="goBack" href="index.html">Wróć do strony głównej</a>
 
     <h2>Mycie dachów:</h2>
 
@@ -67,9 +49,67 @@
 
         </figure>
 
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Mycie</figcaption>
+
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic2.jpg" itemprop="contentUrl" data-size="964x1024">
+                <img src="images/gallery/pic2.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Malowanie</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic3.jpg" itemprop="contentUrl" data-size="1024x683">
+                <img src="images/gallery/pic3.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Sprzątanie</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Mycie</figcaption>
+
+        </figure>
+
     </div>
 
     <h2>Mycie podjazdów:</h2>
+
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic3.jpg" itemprop="contentUrl" data-size="1024x683">
+                <img src="images/gallery/pic3.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Sprzątanie</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Mycie</figcaption>
+
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="images/gallery/pic2.jpg" itemprop="contentUrl" data-size="964x1024">
+                <img src="images/gallery/pic2.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">Malowanie</figcaption>
+        </figure>
+
+    </div>
+
+    <h2>Malowanie budynków:</h2>
 
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
