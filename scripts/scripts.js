@@ -20,17 +20,19 @@ window.addEventListener('scroll', function (e) {
   }
 });
 
+const toggleMobMenu = () => {
+  const menuBox = document.querySelector('.topNav-menu--mob_box');
+    menuBox.classList.contains('topNav-menu--mob_open') ? menuBox.classList.remove('topNav-menu--mob_open') : menuBox.classList.add('topNav-menu--mob_open');
+}
+
 const menuBtns = Array.from(document.getElementsByClassName('topNav-menu--mob_ico'));
 menuBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const menuBox = document.querySelector('.topNav-menu--mob_box');
-    menuBox.classList.contains('topNav-menu--mob_open') ? menuBox.classList.remove('topNav-menu--mob_open') : menuBox.classList.add('topNav-menu--mob_open');
-  })
+  btn.addEventListener('click', toggleMobMenu)
 })
 
 //menu listeners
 function scrollToElem (target) {
-  console.log(target)
+  toggleMobMenu();
   document.querySelector(`${target}`).scrollIntoView({behavior: "smooth", block: "start"});
 }
 

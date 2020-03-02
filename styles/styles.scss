@@ -1,6 +1,5 @@
-$color-basic: #58B79D;
-$color-secondary: #364B44;
-$color-tertiary: #6DACE4;
+$color-secondary: #f5da42;
+$color-basic: #6DACE4;
 $color-warn: #FFA17A;
 $color-text: #213026;
 
@@ -62,45 +61,62 @@ header {
             }
             &--txt {
                 &_color {
-                    color: $color-basic;
+                    color: $color-secondary;
                 }
             }
         }
         .topNav-menu {
             &--list {
-            list-style: none;
+                list-style: none;
             li {
                 margin: 0 7px;
             }
             }
             &--mob {
                 font-size: 36px;
-                color:black;
+                color:rgb(107, 107, 107);
                 &_box {
-                width: 160px;
-                background-color: $color-secondary;
-                right: -160px;
+                width: 50vw;
+                min-width: 160px;
+                height: 100vh;
+                background-color: $color-text;
+                right: -50vw;
                 top: 0;
                 will-change: right;
                 transition: right .2s;
                 font-size: 24px;
+                font-weight: 300;
                 li {
-                    padding: 5px 0;
+                    padding: 8px 0;
                     color: white;
+                    &:not(:first-of-type) {
+                        border-bottom: 1px solid rgb(107, 107, 107);
+                    }
+                    &:first-of-type {
+                        a {
+                            text-align: right;
+                        }
+                    }
                     a {
                         color: white;
+                        display: block;
+                        width: 100%;
+                        
                     }
                 }
             }
-            &_open {
-                right: 0;
-            }
+                &_open {
+                    right: 0;
+                }
+                &_ico {
+                    color: $color-text;
+                }
             }
             
         }
         a, li {
             &:hover {
-                color: $color-basic;
+                color: $color-secondary;
             }
         }
         .call-ico {
@@ -173,13 +189,16 @@ main {
     color:black;
     .aboutUs {
         font-size: 20px;
+        &-txt {
+            text-align: justify;
+        }
         &-imgs {
             @media (max-width:992px) {
                 height: 480px;
             }
             @media (max-width:768px) {
-            height: 300px;
-        }
+                height: 300px;
+            }
             &--inner {
                 width: 45%;
                 height: auto;
@@ -226,18 +245,17 @@ main {
         overflow: hidden;
         width: calc(100% + 30px);
         margin-left: -15px;
-        &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image:url("../images/raindrops.png");
-        background-position: 50% 50%;
-        background-color: #f2f2f2;
-        // filter: blur(5px);
-        animation: move 5s ease-in-out infinite alternate;
-        }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image:url("../images/raindrops.png");
+                background-position: 50% 50%;
+                background-color: #f2f2f2;
+                animation: move 5s ease-in-out infinite alternate;
+            }
         
         &-title {
         color: black;
@@ -330,4 +348,5 @@ main {
 footer {
     background-color: #101010;
     font-size: 18px;
+    color: $color-secondary;
 }
