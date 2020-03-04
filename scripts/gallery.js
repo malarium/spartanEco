@@ -22,13 +22,15 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
             linkEl = figureEl.children[0]; // <a> element
 
-            size = linkEl.getAttribute('data-size').split('x');
+            // size = linkEl.getAttribute('data-size').split('x');
 
             // create slide object
             item = {
                 src: linkEl.getAttribute('href'),
-                w: parseInt(size[0], 10),
-                h: parseInt(size[1], 10)
+                w: 0,
+                h: 0
+                // w: parseInt(size[0], 10),
+                // h: parseInt(size[1], 10)
             };
 
 
@@ -183,6 +185,20 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+
+        gallery.listen('gettingData', function(index, item) {
+        if (item.w < 1 || item.h < 1) { // unknown size
+        var img = new Image(); 
+        img.onload = function() { // will get size after load
+        item.w = this.width; // set image width
+        item.h = this.height; // set image height
+           gallery.invalidateCurrItems(); // reinit Items
+           gallery.updateSize(true); // reinit Items
+        }
+            img.src = item.src; // let's download image
+            }
+        });
+
         gallery.init();
     };
 

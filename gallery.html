@@ -16,72 +16,18 @@
     <a class="goBack" href="index.html">Wróć do strony głównej</a>
 
     <h2>Mycie dachów:</h2>
+    <div class="my-gallery" id="dachy" itemscope itemtype="http://schema.org/ImageGallery"></div>
 
-    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <h2>Mycie elewacji:</h2>
+    <div class="my-gallery" id="elewacja" itemscope itemtype="http://schema.org/ImageGallery"></div>
 
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
-                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Mycie</figcaption>
+    <h2>Mycie kostki:</h2>
+    <div class="my-gallery" id="kostka" itemscope itemtype="http://schema.org/ImageGallery"></div>
 
-        </figure>
+    <h2>Mycie zbiorników:</h2>
+    <div class="my-gallery" id="zbiorniki" itemscope itemtype="http://schema.org/ImageGallery"></div>
 
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic2.jpg" itemprop="contentUrl" data-size="964x1024">
-                <img src="images/gallery/pic2.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Malowanie</figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic3.jpg" itemprop="contentUrl" data-size="1024x683">
-                <img src="images/gallery/pic3.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Sprzątanie</figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
-                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Mycie</figcaption>
-
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
-                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Mycie</figcaption>
-
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic2.jpg" itemprop="contentUrl" data-size="964x1024">
-                <img src="images/gallery/pic2.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Malowanie</figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic3.jpg" itemprop="contentUrl" data-size="1024x683">
-                <img src="images/gallery/pic3.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Sprzątanie</figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="images/gallery/pic1.jpg" itemprop="contentUrl" data-size="1024x1024">
-                <img src="images/gallery/pic1.jpg" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description">Mycie</figcaption>
-
-        </figure>
-
-    </div>
-
-    <h2>Mycie podjazdów:</h2>
+    <!-- <h2>Mycie podjazdów:</h2>
 
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
@@ -135,7 +81,7 @@
             <figcaption itemprop="caption description">Malowanie</figcaption>
         </figure>
 
-    </div>
+    </div> -->
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -202,7 +148,55 @@
         </div>
 
     </div>
+    <script>
+        var dachyGallery = document.querySelector('#dachy');
+        var elewacjeGallery = document.querySelector('#elewacja');
+        var kostkaGallery = document.querySelector('#kostka');
+        var zbiornikiGallery = document.querySelector('#zbiorniki');
+        for(let a=1;a<38;a++) {
+            let slide = `
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="./images/gallery/dachy/dachy (${a}).jpg" itemprop="contentUrl" >
+                        <img src="./images/gallery/dachy/dachy (${a}).jpg" itemprop="thumbnail" alt="mycie dachów" />
+                    </a>
+                </figure>
+            `;
+            dachyGallery.innerHTML += slide;
+        }
 
+        for(let a=1;a<61;a++) {
+            let slide = `
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="./images/gallery/elewacje/elewacja (${a}).jpg" itemprop="contentUrl" >
+                        <img src="./images/gallery/elewacje/elewacja (${a}).jpg" itemprop="thumbnail" alt="mycie elewacji" />
+                    </a>
+                </figure>
+            `;
+            elewacjeGallery.innerHTML += slide;
+        }
+
+        for(let a=1;a<20;a++) {
+            let slide = `
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="./images/gallery/kostka/kostka (${a}).jpg" itemprop="contentUrl" >
+                        <img src="./images/gallery/kostka/kostka (${a}).jpg" itemprop="thumbnail" alt="mycie kostki" />
+                    </a>
+                </figure>
+            `;
+            kostkaGallery.innerHTML += slide;
+        }
+
+        for(let a=1;a<23;a++) {
+            let slide = `
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="./images/gallery/zbiorniki/zbiorniki (${a}).jpg" itemprop="contentUrl" >
+                        <img src="./images/gallery/zbiorniki/zbiorniki (${a}).jpg" itemprop="thumbnail" alt="mycie zbiorników" />
+                    </a>
+                </figure>
+            `;
+            zbiornikiGallery.innerHTML += slide;
+        }
+    </script>
     <script src="photoswipe/photoswipe.min.js"></script>
     <script src="photoswipe/photoswipe-ui-default.min.js"></script>
     <script src="scripts/gallery.min.js"></script>

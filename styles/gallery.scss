@@ -25,20 +25,25 @@ body {
         
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
         justify-content: center;
         img {
             width: 100%;
             height: auto;
+            &[itemprop="thumbnail"] {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
         }
         figure {
             display: block;
             float: left;
-            margin: 0 5px 5px 0;
+            margin: 5px;
             width: 150px;
         }
-        figcaption {
-            display: none;
-        }
+
     }
 }
