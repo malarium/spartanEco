@@ -22,13 +22,11 @@ body {
         }
     }
     .my-gallery {
-        
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
         overflow-y: hidden;
         overflow-x: scroll;
-        justify-content: center;
         img {
             width: 100%;
             height: auto;
