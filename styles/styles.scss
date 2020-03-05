@@ -281,6 +281,12 @@ main {
                 font-size: 1.1em;
                 text-transform: uppercase;
                 font-weight: 500;
+                &.collapsed {
+                    &:after {
+                        display: block;
+                        content: "\25BC";
+                    }
+                }
             }
         }
         .card-body {
