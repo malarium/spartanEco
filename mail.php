@@ -5,7 +5,7 @@
 </head>
 
 <?php
-  $do = "malarium@wp.pl";
+  $do = "krzysztofpprzybylek@gmail.com";
   if(isset($_POST['temat']) && isset($_POST['wiadomosc']) && isset($_POST['mail_zw'])) {
     $temat = $_POST['temat'];
     $tresc = $_POST['wiadomosc'];
@@ -16,8 +16,8 @@
     }
     else {
       $headers = "From: ".$mail."\n";
-      //$headers .= "Content-Type: text/plain; charset=UTF-8\n";
-      //$headers .= "Content-Transfer-Encoding: 8bit\n";
+      $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+      $headers .= "Content-Transfer-Encoding: 8bit\n";
       if(mail($do, $temat, $tresc, $headers)){
         echo '<h1><center>Wiadomość wysłana, dziękujemy!</center></h1>';
       }
