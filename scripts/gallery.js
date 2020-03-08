@@ -219,7 +219,3 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
-
-// gallery.listen('close', function() {
-//     window.location.href='index.html'
-//  });
