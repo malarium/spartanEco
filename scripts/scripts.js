@@ -40,3 +40,25 @@ const dateBox = document.querySelector('.date-box');
 const actualDate = new Date().getFullYear();
 dateBox.textContent = `© ${actualDate} by SpartanEco`;
 
+(function($) {
+  $('a[href^=mailto]').each(function() {
+    var href = $(this).attr('href');
+    $(this).click(function() {
+      var t;
+      var self = $(this);
+
+      $(window).blur(function() {
+        clearTimeout(t);
+      });
+
+      t = setTimeout(function() {
+        document.querySelector('.contact-form--info').style.display="none";
+        document.querySelector('.contact-form--btn').style.display="none";
+        document.querySelector('.contact-form--alternative').innerHTML = `
+        <p>Niestety nie masz zainstalowanego programu pocztowego.</p>
+        <p>Wyślij mail na adres:</p>
+        <p class='maildata'>krzysztofpprzybylek@gmail.com</p>`
+      }, 500);
+    });
+  });
+})(jQuery);

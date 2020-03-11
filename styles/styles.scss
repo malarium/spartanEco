@@ -328,25 +328,27 @@ main {
         
         &-form {
             width: 100%;
-            form {
+            div {
                 height: 400px;
-            }
-            input[type=text],
-            input[type=email] {
-                line-height: 24px;
-                padding: 5px;
                 font-size: 24px;
             }
-            textarea {
-                line-height: 24px;
-                padding: 5px;
-                font-size: 24px;
+            &--btn {
+                border: 3px solid $color-warn;
+                border-radius: 5px;
+                background-color: $color-warn;
+                color: black;
+                width: 75%;
+                max-width: 280px;
+                padding: 10px;
+                margin: 0 auto;
+                transition: background-color .2s;
+                &:hover {
+                    background-color: transparent;
+                }
             }
-            input[type=submit] {
-                border: 1px solid #FFA17A;
-                background-color: #FFA17A;
-                font-size: 24px;
-                font-weight: 800;
+            .maildata {
+                font-weight: bold;
+                font-size: 30px;
             }
         }
     }
