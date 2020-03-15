@@ -55,10 +55,10 @@ dateBox.textContent = `© ${actualDate} by SpartanEco`;
         document.querySelector('.contact-form--info').style.display="none";
         document.querySelector('.contact-form--btn').style.display="none";
         document.querySelector('.contact-form--alternative').innerHTML = `
-        <p>Niestety nie masz zainstalowanego programu pocztowego.</p>
-        <p>Wyślij mail na adres:</p>
-        <p class='maildata'>krzysztofpprzybylek@gmail.com</p>`
-      }, 500);
+        <p>Program pocztowy nie działa?</p>
+        <p>Wyślij mail na adres:</p>`
+        // <p class='maildata'>krzysztofpprzybylek@gmail.com</p>`
+      }, 1000);
     });
   });
 })(jQuery);
